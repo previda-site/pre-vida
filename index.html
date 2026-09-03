@@ -1,0 +1,2093 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pré Vida</title>
+
+    <style>
+
+        /* =========================
+           CONFIGURAÇÕES GERAIS
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff9fc;
+            color: #4d3b50;
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           CABEÇALHO
+        ========================= */
+
+        header {
+            height: 80px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 8%;
+            box-shadow: 0 2px 10px rgba(80, 50, 80, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo strong {
+            color: #754c88;
+            font-size: 25px;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #60466b;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #a968a0;
+        }
+
+
+        /* =========================
+           INÍCIO
+        ========================= */
+
+        .inicio {
+            min-height: 650px;
+            padding: 70px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+            background: linear-gradient(135deg, #fff1f7, #f6efff);
+        }
+
+        .texto-inicio {
+            max-width: 650px;
+        }
+
+        .texto-inicio .pequeno {
+            color: #a85f91;
+            font-weight: bold;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+
+        .texto-inicio h1 {
+            font-size: 58px;
+            color: #754c88;
+            margin-bottom: 10px;
+        }
+
+        .texto-inicio h2 {
+            font-size: 27px;
+            color: #8f5d87;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+
+        .texto-inicio > p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+
+        /* =========================
+           LOGO DA PÁGINA INICIAL
+        ========================= */
+
+        .imagem-inicio {
+            width: 360px;
+            height: 360px;
+            border-radius: 30px;
+            background-color: #f4ddea;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .imagem-inicio img {
+            width: 90%;
+            height: 90%;
+            object-fit: contain;
+        }
+
+
+        /* =========================
+           BOTÕES PRINCIPAIS
+        ========================= */
+
+        .botoes-projeto {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 900px;
+            margin-top: 35px;
+        }
+
+        .card-botao {
+            background-color: white;
+            padding: 25px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #4d3b50;
+            box-shadow: 0 5px 20px rgba(80, 50, 80, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            transition: 0.2s;
+        }
+
+        .card-botao:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 9px 25px rgba(80, 50, 80, 0.14);
+        }
+
+        .card-botao span {
+            font-size: 30px;
+        }
+
+        .card-botao strong {
+            color: #754c88;
+            font-size: 19px;
+        }
+
+        .card-botao small {
+            color: #6d5a70;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           BOTÕES E SEÇÕES
+        ========================= */
+
+        .botao {
+            display: inline-block;
+            background-color: #9565a8;
+            color: white;
+            border: none;
+            text-decoration: none;
+            padding: 13px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .botao:hover {
+            background-color: #754c88;
+        }
+
+        section {
+            padding: 80px 8%;
+            scroll-margin-top: 80px;
+        }
+
+        .titulo {
+            text-align: center;
+            color: #754c88;
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .subtitulo {
+            text-align: center;
+            max-width: 780px;
+            margin: 0 auto 40px;
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           CARDS
+        ========================= */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(80, 50, 80, 0.08);
+        }
+
+        .card h3 {
+            color: #a85f91;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+
+        /* =========================
+           DESTAQUE
+        ========================= */
+
+        .destaque {
+            background-color: #f5edff;
+            border-radius: 30px;
+            padding: 40px;
+            max-width: 1000px;
+            margin: 40px auto 0;
+            text-align: center;
+        }
+
+
+        /* =========================
+           ACOMPANHAMENTO DOS MESES
+        ========================= */
+
+        .meses {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            max-width: 850px;
+            margin: 30px auto;
+        }
+
+        .mes-botao {
+            background-color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 22px 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #754c88;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(80, 50, 80, 0.08);
+            transition: 0.2s;
+        }
+
+        .mes-botao:hover {
+            transform: translateY(-4px);
+            background-color: #f8effb;
+        }
+
+        .conteudo-mes {
+            width: 90%;
+            max-width: 900px;
+            margin: 35px auto;
+            padding: 45px;
+            background-color: white;
+            border-radius: 25px;
+            box-shadow: 0 8px 25px rgba(80, 50, 80, 0.12);
+            text-align: left;
+        }
+
+        .conteudo-mes h3 {
+            color: #754c88;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .conteudo-mes p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 18px;
+        }
+
+
+        /* =========================
+           PROFISSIONAIS
+        ========================= */
+
+        .profissionais-icones {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 900px;
+            margin: 40px auto;
+        }
+
+        .profissional-item {
+            background-color: white;
+            border: none;
+            border-radius: 20px;
+            min-height: 170px;
+            padding: 30px 20px;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(80, 50, 80, 0.08);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            transition: 0.2s;
+            font-family: inherit;
+        }
+
+        .profissional-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 9px 25px rgba(80, 50, 80, 0.14);
+        }
+
+        .profissional-item span {
+            font-size: 55px;
+            line-height: 1;
+        }
+
+        .profissional-item strong {
+            color: #754c88;
+            font-size: 18px;
+        }
+
+        .info-profissional {
+            width: 90%;
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 40px;
+            background-color: white;
+            border-radius: 25px;
+            box-shadow: 0 8px 25px rgba(80, 50, 80, 0.10);
+            text-align: left;
+        }
+
+        .info-profissional h3 {
+            color: #754c88;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .info-profissional p {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           SEU PRÉ-NATAL NA PRÁTICA
+        ========================= */
+
+        .pratica-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1000px;
+            margin: 35px auto;
+        }
+
+        .pratica-botao {
+            background-color: white;
+            border: none;
+            border-radius: 20px;
+            min-height: 175px;
+            padding: 28px 22px;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(80, 50, 80, 0.08);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            transition: 0.2s;
+            font-family: inherit;
+            color: #4d3b50;
+        }
+
+        .pratica-botao:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 9px 25px rgba(80, 50, 80, 0.14);
+        }
+
+        .pratica-botao span {
+            font-size: 45px;
+            line-height: 1;
+        }
+
+        .pratica-botao strong {
+            color: #754c88;
+            font-size: 18px;
+        }
+
+        .pratica-botao small {
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .info-pratica {
+            width: 90%;
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 40px;
+            background-color: white;
+            border-radius: 25px;
+            box-shadow: 0 8px 25px rgba(80, 50, 80, 0.10);
+            text-align: left;
+        }
+
+        .info-pratica h3 {
+            color: #754c88;
+            font-size: 28px;
+            margin-bottom: 16px;
+        }
+
+        .info-pratica p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .info-pratica ul {
+            margin: 10px 0 20px 25px;
+        }
+
+        .info-pratica li {
+            margin-bottom: 10px;
+        }
+
+        .aviso-saude {
+            background-color: #fff4f8;
+            border-radius: 18px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+
+        /* =========================
+           FONTES
+        ========================= */
+
+        .fontes {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 35px;
+            border-radius: 25px;
+            box-shadow: 0 5px 20px rgba(80, 50, 80, 0.08);
+        }
+
+        .fontes h3 {
+            color: #754c88;
+            margin-bottom: 15px;
+        }
+
+        .fontes p {
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================
+           RODAPÉ
+        ========================= */
+
+        footer {
+            background-color: #6f4a7d;
+            color: white;
+            text-align: center;
+            padding: 35px;
+        }
+
+
+        /* =========================
+           CELULAR
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            header {
+                height: auto;
+                padding: 15px 5%;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            .inicio {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .texto-inicio h1 {
+                font-size: 42px;
+            }
+
+            .texto-inicio h2 {
+                font-size: 23px;
+            }
+
+            .imagem-inicio {
+                width: 290px;
+                height: 290px;
+            }
+
+            .botoes-projeto {
+                grid-template-columns: 1fr;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .meses {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .profissionais-icones {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .pratica-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .conteudo-mes,
+            .info-profissional,
+            .info-pratica {
+                padding: 28px;
+            }
+        }
+
+
+        @media (max-width: 500px) {
+
+            .meses,
+            .profissionais-icones,
+            .pratica-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .imagem-inicio {
+                width: 250px;
+                height: 250px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         CABEÇALHO
+    ========================== -->
+
+    <header>
+
+        <div class="logo">
+            <strong>Pré Vida</strong>
+        </div>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#prenatal">Pré-Natal</a>
+            <a href="#profissionais">Profissionais</a>
+            <a href="#adesao">Adesão</a>
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         INÍCIO
+    ========================== -->
+
+    <section class="inicio" id="inicio">
+
+        <div class="texto-inicio">
+
+            <p class="pequeno">
+                ACOLHIMENTO • INFORMAÇÃO • CUIDADO
+            </p>
+
+            <h1>
+                Pré Vida
+            </h1>
+
+            <h2>
+                Menos barreiras, mais cuidado para cada mulher.
+            </h2>
+
+            <p>
+                Um espaço criado para ajudar mulheres a compreender
+                o pré-natal, seus cuidados e a importância do
+                acompanhamento durante a gestação.
+            </p>
+
+
+            <div class="botoes-projeto">
+
+                <a href="#prenatal" class="card-botao">
+                    <span>🤰</span>
+                    <strong>O que é o pré-natal?</strong>
+                    <small>
+                        Entenda o que é e por que ele é importante.
+                    </small>
+                </a>
+
+
+                <a href="#acompanhamento" class="card-botao">
+                    <span>📅</span>
+                    <strong>Acompanhamento da gestação</strong>
+                    <small>
+                        Conheça as mudanças e os cuidados ao longo dos meses.
+                    </small>
+                </a>
+
+
+                <a href="#barreiras" class="card-botao">
+                    <span>💗</span>
+                    <strong>Barreiras ao pré-natal</strong>
+                    <small>
+                        Conheça os obstáculos que podem dificultar o acesso.
+                    </small>
+                </a>
+
+
+                <a href="#postos" class="card-botao">
+                    <span>📍</span>
+                    <strong>Encontre um posto de saúde</strong>
+                    <small>
+                        Veja unidades de saúde próximas de você.
+                    </small>
+                </a>
+
+
+                <a href="#profissionais" class="card-botao">
+                    <span>👩‍⚕️</span>
+                    <strong>Profissionais de saúde</strong>
+                    <small>
+                        Conheça quem participa desse cuidado.
+                    </small>
+                </a>
+
+
+                <a href="#pratica" class="card-botao">
+                    <span>📒</span>
+                    <strong>Seu pré-natal na prática</strong>
+                    <small>
+                        Caderneta, vacinação, direitos, rede de apoio e mais.
+                    </small>
+                </a>
+
+
+                <a href="#sobre" class="card-botao">
+                    <span>ℹ️</span>
+                    <strong>Sobre o Pré Vida</strong>
+                    <small>
+                        Conheça o nosso grupo e o motivo da criação do projeto.
+                    </small>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="imagem-inicio">
+
+            <img
+                src="logo.jpeg"
+                alt="Logo Pré Vida"
+            >
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PRÉ-NATAL
+    ========================== -->
+
+    <section id="prenatal">
+
+        <h2 class="titulo">
+            O que é o pré-natal?
+        </h2>
+
+        <p class="subtitulo">
+            O pré-natal é o acompanhamento realizado durante toda a
+            gestação, por meio de consultas, exames e orientações
+            voltadas à promoção da saúde da mulher e do bebê.
+        </p>
+
+        <p class="subtitulo">
+            Esse cuidado permite acompanhar o desenvolvimento da
+            gestação, identificar precocemente possíveis fatores de
+            risco e prevenir ou acompanhar complicações.
+        </p>
+
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>
+                    📋 Consultas e exames
+                </h3>
+
+                <p>
+                    O acompanhamento envolve consultas periódicas,
+                    exames e orientações que ajudam a monitorar
+                    a saúde materna e fetal.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    🔎 Identificação de riscos
+                </h3>
+
+                <p>
+                    O pré-natal possibilita identificar precocemente
+                    fatores de risco e situações que precisam de atenção.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    🌷 Cuidado contínuo
+                </h3>
+
+                <p>
+                    O acompanhamento deve começar o quanto antes e
+                    continuar ao longo da gestação, de acordo com as
+                    necessidades de cada mulher.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="destaque">
+
+            <h3 style="color: #754c88; margin-bottom: 15px;">
+                Por que o pré-natal é tão importante?
+            </h3>
+
+            <p>
+                O acompanhamento adequado busca promover a saúde da
+                mulher e do bebê, contribuindo para a identificação
+                e prevenção de possíveis complicações durante a
+                gestação e para um parto mais seguro.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ACOMPANHAMENTO
+    ========================== -->
+
+    <section id="acompanhamento">
+
+        <h2 class="titulo">
+            Acompanhamento da gestação
+        </h2>
+
+        <p class="subtitulo">
+            Cada gestação é única. Este guia apresenta mudanças,
+            sintomas e cuidados que podem ocorrer ao longo da gravidez.
+            O acompanhamento deve sempre considerar as necessidades
+            individuais de cada mulher.
+        </p>
+
+
+        <div class="meses">
+
+            <button class="mes-botao" onclick="mostrarMes(1)">
+                1º mês
+            </button>
+
+            <button class="mes-botao" onclick="mostrarMes(2)">
+                2º mês
+            </button>
+
+            <button class="mes-botao" onclick="mostrarMes(3)">
+                3º mês
+            </button>
+
+            <button class="mes-botao" onclick="mostrarMes(4)">
+                4º mês
+            </button>
+
+            <button class="mes-botao" onclick="mostrarMes(5)">
+                5º mês
+            </button>
+
+            <button class="mes-botao" onclick="mostrarMes(6)">
+                6º mês
+            </button>
+
+            <button class="mes-botao" onclick="mostrarMes(7)">
+                7º mês
+            </button>
+
+            <button class="mes-botao" onclick="mostrarMes(8)">
+                8º mês
+            </button>
+
+            <button class="mes-botao" onclick="mostrarMes(9)">
+                9º mês
+            </button>
+
+        </div>
+
+
+        <div id="conteudo-mes" class="conteudo-mes">
+
+            <h3>
+                🌷 Escolha um mês
+            </h3>
+
+            <p>
+                Clique em um dos meses acima para conhecer
+                informações sobre essa fase da gestação.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         BARREIRAS
+    ========================== -->
+
+    <section id="barreiras">
+
+        <h2 class="titulo">
+            Barreiras ao pré-natal
+        </h2>
+
+        <p class="subtitulo">
+            A adesão ao pré-natal não depende apenas da decisão
+            individual da gestante. Diferentes fatores podem
+            dificultar o início e a continuidade desse acompanhamento.
+        </p>
+
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>
+                    📚 Falta de informação
+                </h3>
+
+                <p>
+                    O desconhecimento sobre a importância do pré-natal
+                    pode contribuir para o início tardio ou para a não
+                    realização adequada desse acompanhamento.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    🏥 Dificuldade de acesso
+                </h3>
+
+                <p>
+                    Distância, dificuldades de transporte e acesso aos
+                    serviços de saúde podem dificultar a realização
+                    e a continuidade das consultas.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    💰 Condições socioeconômicas
+                </h3>
+
+                <p>
+                    As condições de vida e os recursos disponíveis
+                    podem interferir na possibilidade de iniciar
+                    e manter o acompanhamento durante a gestação.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    ⏰ Rotina e responsabilidades
+                </h3>
+
+                <p>
+                    Trabalho, tarefas domésticas, cuidados com outros
+                    filhos e outras responsabilidades podem dificultar
+                    a presença nas consultas.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    ⚠️ Possíveis consequências
+                </h3>
+
+                <p>
+                    Quando o acompanhamento não acontece adequadamente,
+                    pode haver dificuldade para identificar e acompanhar
+                    precocemente situações que precisam de atenção.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    💗 Informação também é cuidado
+                </h3>
+
+                <p>
+                    Ampliar o acesso a orientações confiáveis e acessíveis
+                    pode contribuir para reduzir barreiras e incentivar
+                    a busca e a continuidade do pré-natal.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROFISSIONAIS
+    ========================== -->
+
+    <section id="profissionais">
+
+        <h2 class="titulo">
+            Profissionais de saúde
+        </h2>
+
+        <p class="subtitulo">
+            Conheça os profissionais que podem participar do cuidado
+            durante a gestação.
+        </p>
+
+
+        <div class="profissionais-icones">
+
+
+            <button
+                class="profissional-item"
+                onclick="mostrarProfissional('enfermagem')"
+            >
+                <span>👩‍⚕️</span>
+                <strong>Enfermagem</strong>
+            </button>
+
+
+            <button
+                class="profissional-item"
+                onclick="mostrarProfissional('medicina')"
+            >
+                <span>🩺</span>
+                <strong>Medicina</strong>
+            </button>
+
+
+            <button
+                class="profissional-item"
+                onclick="mostrarProfissional('nutricao')"
+            >
+                <span>🥗</span>
+                <strong>Nutrição</strong>
+            </button>
+
+
+            <button
+                class="profissional-item"
+                onclick="mostrarProfissional('odontologia')"
+            >
+                <span>🦷</span>
+                <strong>Odontologia</strong>
+            </button>
+
+
+            <button
+                class="profissional-item"
+                onclick="mostrarProfissional('psicologia')"
+            >
+                <span>🧠</span>
+                <strong>Psicologia</strong>
+            </button>
+
+
+            <button
+                class="profissional-item"
+                onclick="mostrarProfissional('social')"
+            >
+                <span>🤝</span>
+                <strong>Serviço Social</strong>
+            </button>
+
+        </div>
+
+
+        <div id="info-profissional" class="info-profissional">
+
+            <h3>
+                🌷 Escolha um profissional
+            </h3>
+
+            <p>
+                Clique em um dos ícones acima para conhecer sua atuação
+                no cuidado durante a gestação.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         POSTOS
+    ========================== -->
+
+    <section id="postos">
+
+        <h2 class="titulo">
+            Encontre um posto de saúde
+        </h2>
+
+        <p class="subtitulo">
+            Encontre unidades de saúde próximas de você.
+            Para isso, o Pré Vida poderá utilizar a localização
+            do seu dispositivo, sempre mediante sua autorização.
+        </p>
+
+
+        <div class="destaque">
+
+            <h3 style="color: #754c88; margin-bottom: 15px;">
+                📍 Encontre atendimento perto de você
+            </h3>
+
+            <p style="margin-bottom: 25px;">
+                Permita o acesso à sua localização para encontrar
+                serviços de saúde próximos.
+            </p>
+
+            <button
+                class="botao"
+                onclick="encontrarPostos()"
+            >
+                Encontrar postos próximos
+            </button>
+
+
+            <div
+                id="resultado-postos"
+                style="margin-top: 25px;"
+            >
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SEU PRÉ-NATAL NA PRÁTICA
+    ========================== -->
+
+    <section id="pratica">
+
+        <h2 class="titulo">
+            Seu pré-natal na prática
+        </h2>
+
+        <p class="subtitulo">
+            Informações que podem ajudar a gestante a compreender
+            melhor o acompanhamento e participar de forma mais
+            informada do próprio cuidado.
+        </p>
+
+
+        <div class="pratica-grid">
+
+
+            <button
+                class="pratica-botao"
+                onclick="mostrarPratica('caderneta')"
+            >
+                <span>📒</span>
+
+                <strong>
+                    Caderneta da Gestante
+                </strong>
+
+                <small>
+                    Entenda para que ela serve e como utilizá-la.
+                </small>
+            </button>
+
+
+            <button
+                class="pratica-botao"
+                onclick="mostrarPratica('vacinas')"
+            >
+                <span>💉</span>
+
+                <strong>
+                    Vacinação
+                </strong>
+
+                <small>
+                    Acompanhe a importância de verificar a vacinação.
+                </small>
+            </button>
+
+
+            <button
+                class="pratica-botao"
+                onclick="mostrarPratica('direitos')"
+            >
+                <span>⚖️</span>
+
+                <strong>
+                    Seus direitos
+                </strong>
+
+                <small>
+                    Conheça informações sobre direitos relacionados
+                    ao cuidado e ao parto.
+                </small>
+            </button>
+
+
+            <button
+                class="pratica-botao"
+                onclick="mostrarPratica('apoio')"
+            >
+                <span>👥</span>
+
+                <strong>
+                    Rede de apoio
+                </strong>
+
+                <small>
+                    Descubra como pessoas de confiança podem participar.
+                </small>
+            </button>
+
+
+            <button
+                class="pratica-botao"
+                onclick="mostrarPratica('mitos')"
+            >
+                <span>❓</span>
+
+                <strong>
+                    Mitos e verdades
+                </strong>
+
+                <small>
+                    Questione informações e descubra o que faz sentido.
+                </small>
+            </button>
+
+
+            <button
+                class="pratica-botao"
+                onclick="mostrarPratica('alertas')"
+            >
+                <span>🚨</span>
+
+                <strong>
+                    Quando procurar atendimento?
+                </strong>
+
+                <small>
+                    Conheça sinais que merecem avaliação profissional.
+                </small>
+            </button>
+
+        </div>
+
+
+        <div id="info-pratica" class="info-pratica">
+
+            <h3>
+                🌷 Escolha uma opção
+            </h3>
+
+            <p>
+                Clique em um dos cartões acima para conhecer mais
+                informações sobre essa etapa do cuidado.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ADESÃO
+    ========================== -->
+
+    <section id="adesao">
+
+        <div class="destaque">
+
+            <h2 class="titulo">
+                A importância da adesão ao pré-natal
+            </h2>
+
+            <p class="subtitulo">
+                A realização contínua do pré-natal permite que a mulher
+                tenha acompanhamento durante a gestação e acesso a
+                informações e cuidados de saúde.
+            </p>
+
+            <p>
+                O acesso à informação é um dos elementos que podem
+                contribuir para a compreensão da importância desse
+                acompanhamento e para a busca pelos serviços de saúde.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SOBRE O PRÉ VIDA
+    ========================== -->
+
+    <section id="sobre">
+
+        <h2 class="titulo">
+            Sobre o Pré Vida
+        </h2>
+
+        <p class="subtitulo">
+            Conheça o nosso grupo e entenda por que criamos este projeto.
+        </p>
+
+
+        <div class="cards">
+
+
+            <div class="card">
+
+                <h3>
+                    🌷 Quem somos nós?
+                </h3>
+
+                <p>
+                    Somos <strong>Letícia Monteiro, Sofia Andrade e
+                    Vinícius Resende</strong>, alunos do
+                    <strong>Colégio Santa Maria Minas</strong>.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    💗 Por que criamos o Pré Vida?
+                </h3>
+
+                <p>
+                    O Pré Vida foi criado como parte de um
+                    <strong>projeto de iniciação científica</strong>,
+                    a partir do nosso interesse pela área da saúde
+                    e, especialmente, pela temática da obstetrícia.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    📚 Como desenvolvemos o projeto?
+                </h3>
+
+                <p>
+                    Realizamos uma revisão bibliográfica utilizando
+                    sites oficiais de instituições de saúde e
+                    artigos científicos para reunir informações
+                    confiáveis sobre o pré-natal e sua adesão.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="destaque">
+
+            <h3 style="color: #754c88; margin-bottom: 15px;">
+                Nosso objetivo
+            </h3>
+
+            <p>
+                Reunir informações confiáveis e acessíveis sobre o
+                pré-natal, contribuindo para ampliar o acesso ao
+                conhecimento e incentivar a busca e a continuidade
+                desse acompanhamento.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FONTES
+    ========================== -->
+
+    <section id="fontes">
+
+        <h2 class="titulo">
+            Fontes e referências
+        </h2>
+
+        <div class="fontes">
+
+            <h3>
+                📚 Fontes consultadas
+            </h3>
+
+            <p>
+                Ministério da Saúde — Governo Federal.
+            </p>
+
+            <p>
+                Organização Mundial da Saúde (OMS).
+            </p>
+
+            <p>
+                Artigos científicos utilizados na revisão bibliográfica
+                do projeto.
+            </p>
+
+            <p>
+                As informações do Pré Vida devem ser utilizadas como
+                material educativo e não substituem a avaliação de
+                profissionais de saúde.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         RODAPÉ
+    ========================== -->
+
+    <footer>
+
+        <p>
+            Pré Vida 🌷
+        </p>
+
+        <p>
+            Menos barreiras, mais cuidado para cada mulher.
+        </p>
+
+        <p style="margin-top: 10px;">
+            Letícia Monteiro • Sofia Andrade • Vinícius Resende
+        </p>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+
+        /* =========================
+           MESES
+        ========================= */
+
+        function mostrarMes(mes) {
+
+            const conteudo =
+                document.getElementById("conteudo-mes");
+
+
+            const meses = {
+
+                1: `
+                    <h3>
+                        🌷 1º mês — Descoberta e início do cuidado
+                    </h3>
+
+                    <p>
+                        Algumas mulheres podem perceber atraso menstrual,
+                        cansaço, náuseas ou sensibilidade nas mamas.
+                    </p>
+
+                    <p>
+                        🩺 <strong>Acompanhamento:</strong>
+                        o ideal é iniciar o pré-natal o quanto antes,
+                        preferencialmente no primeiro trimestre.
+                    </p>
+                `,
+
+
+                2: `
+                    <h3>
+                        🌷 2º mês — Primeiras adaptações
+                    </h3>
+
+                    <p>
+                        Náuseas, vômitos, sono e cansaço podem estar
+                        mais presentes nesta fase, mas cada mulher
+                        pode vivenciar a gestação de uma maneira diferente.
+                    </p>
+
+                    <p>
+                        🩺 <strong>Acompanhamento:</strong>
+                        continuidade das consultas e dos exames
+                        indicados pela equipe de saúde.
+                    </p>
+                `,
+
+
+                3: `
+                    <h3>
+                        🌷 3º mês — Final do primeiro trimestre
+                    </h3>
+
+                    <p>
+                        Os sintomas podem continuar ou começar a
+                        diminuir para algumas mulheres.
+                    </p>
+
+                    <p>
+                        🩺 <strong>Acompanhamento:</strong>
+                        avaliação da saúde materna e do desenvolvimento
+                        da gestação.
+                    </p>
+                `,
+
+
+                4: `
+                    <h3>
+                        🌷 4º mês — Segundo trimestre
+                    </h3>
+
+                    <p>
+                        Algumas mudanças dos primeiros meses podem
+                        diminuir, enquanto a barriga começa a ficar
+                        mais evidente.
+                    </p>
+
+                    <p>
+                        🩺 <strong>Acompanhamento:</strong>
+                        continuidade das consultas e avaliações
+                        indicadas pela equipe.
+                    </p>
+                `,
+
+
+                5: `
+                    <h3>
+                        🌷 5º mês — Crescimento e novas percepções
+                    </h3>
+
+                    <p>
+                        A barriga pode ficar mais evidente e algumas
+                        mulheres começam a perceber os movimentos
+                        do bebê.
+                    </p>
+
+                    <p>
+                        🩺 <strong>Acompanhamento:</strong>
+                        continuidade do pré-natal e dos exames
+                        indicados.
+                    </p>
+                `,
+
+
+                6: `
+                    <h3>
+                        🌷 6º mês — Acompanhamento contínuo
+                    </h3>
+
+                    <p>
+                        Podem surgir mudanças como azia, dores nas
+                        costas ou inchaço, que variam de mulher
+                        para mulher.
+                    </p>
+
+                    <p>
+                        🩺 <strong>Acompanhamento:</strong>
+                        monitoramento contínuo da saúde da gestante
+                        e do bebê.
+                    </p>
+                `,
+
+
+                7: `
+                    <h3>
+                        🌷 7º mês — Início do terceiro trimestre
+                    </h3>
+
+                    <p>
+                        O crescimento da barriga pode aumentar e
+                        o cansaço pode voltar ou ficar mais evidente.
+                    </p>
+
+                    <p>
+                        🩺 <strong>Acompanhamento:</strong>
+                        as consultas podem se tornar mais frequentes
+                        conforme a gestação avança.
+                    </p>
+                `,
+
+
+                8: `
+                    <h3>
+                        🌷 8º mês — Preparação para o parto
+                    </h3>
+
+                    <p>
+                        Podem aparecer maior desconforto, dificuldade
+                        para dormir e aumento da frequência urinária.
+                    </p>
+
+                    <p>
+                        🩺 <strong>Acompanhamento:</strong>
+                        monitoramento mais próximo e orientações
+                        para o parto e o período após o nascimento.
+                    </p>
+                `,
+
+
+                9: `
+                    <h3>
+                        🌷 9º mês — Aproximação do nascimento
+                    </h3>
+
+                    <p>
+                        A gestante pode perceber mudanças relacionadas
+                        à proximidade do parto, mas o momento do nascimento
+                        varia de mulher para mulher.
+                    </p>
+
+                    <p>
+                        🩺 <strong>Acompanhamento:</strong>
+                        consultas mais frequentes e orientações sobre
+                        quando procurar atendimento.
+                    </p>
+                `
+
+            };
+
+
+            conteudo.innerHTML =
+                meses[mes];
+
+        }
+
+
+        /* =========================
+           POSTOS DE SAÚDE
+        ========================== */
+
+        function encontrarPostos() {
+
+            const resultado =
+                document.getElementById("resultado-postos");
+
+
+            if (!navigator.geolocation) {
+
+                resultado.innerHTML = `
+                    <p>
+                        Seu navegador não permite acessar a localização.
+                    </p>
+                `;
+
+                return;
+            }
+
+
+            resultado.innerHTML = `
+                <p>
+                    📍 Obtendo sua localização...
+                </p>
+            `;
+
+
+            navigator.geolocation.getCurrentPosition(
+
+                function(posicao) {
+
+                    const latitude =
+                        posicao.coords.latitude;
+
+                    const longitude =
+                        posicao.coords.longitude;
+
+
+                    const mapa =
+                        "https://www.google.com/maps/search/postos+de+sa%C3%BAde/@"
+                        + latitude
+                        + ","
+                        + longitude
+                        + ",14z";
+
+
+                    resultado.innerHTML = `
+
+                        <p style="margin-bottom: 20px;">
+                            📍 Localização encontrada!
+                        </p>
+
+                        <a
+                            href="${mapa}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="botao"
+                        >
+                            Ver postos de saúde próximos
+                        </a>
+
+                    `;
+
+                },
+
+
+                function() {
+
+                    resultado.innerHTML = `
+
+                        <p>
+                            Não foi possível acessar sua localização.
+                            Verifique se você permitiu o acesso à
+                            localização no navegador.
+                        </p>
+
+                    `;
+
+                }
+
+            );
+
+        }
+
+
+        /* =========================
+           PROFISSIONAIS
+        ========================== */
+
+        function mostrarProfissional(profissional) {
+
+            const info =
+                document.getElementById("info-profissional");
+
+
+            const profissionais = {
+
+                enfermagem: `
+                    <h3>👩‍⚕️ Enfermagem</h3>
+
+                    <p>
+                        A enfermagem participa do acompanhamento
+                        da gestante, oferecendo orientações, cuidados
+                        e identificando necessidades ao longo do
+                        pré-natal.
+                    </p>
+                `,
+
+
+                medicina: `
+                    <h3>🩺 Medicina</h3>
+
+                    <p>
+                        O profissional de medicina acompanha a evolução
+                        da gestação, avalia a saúde da gestante e
+                        solicita exames e condutas de acordo com cada
+                        situação.
+                    </p>
+                `,
+
+
+                nutricao: `
+                    <h3>🥗 Nutrição</h3>
+
+                    <p>
+                        A nutrição pode contribuir com orientações
+                        relacionadas à alimentação e às necessidades
+                        nutricionais durante a gestação.
+                    </p>
+                `,
+
+
+                odontologia: `
+                    <h3>🦷 Odontologia</h3>
+
+                    <p>
+                        O acompanhamento odontológico contribui para
+                        a manutenção da saúde bucal e para orientações
+                        sobre cuidados durante a gestação.
+                    </p>
+                `,
+
+
+                psicologia: `
+                    <h3>🧠 Psicologia</h3>
+
+                    <p>
+                        A psicologia pode oferecer acolhimento e apoio
+                        diante das mudanças emocionais e dos desafios
+                        que podem acompanhar a gestação.
+                    </p>
+                `,
+
+
+                social: `
+                    <h3>🤝 Serviço Social</h3>
+
+                    <p>
+                        O serviço social pode orientar sobre direitos,
+                        serviços disponíveis e recursos da rede de apoio
+                        e de saúde, conforme as necessidades de cada mulher.
+                    </p>
+                `
+
+            };
+
+
+            info.innerHTML =
+                profissionais[profissional];
+
+        }
+
+
+        /* =========================
+           SEU PRÉ-NATAL NA PRÁTICA
+        ========================== */
+
+        function mostrarPratica(item) {
+
+            const info =
+                document.getElementById("info-pratica");
+
+
+            const conteudos = {
+
+                caderneta: `
+
+                    <h3>
+                        📒 Caderneta da Gestante
+                    </h3>
+
+                    <p>
+                        A Caderneta da Gestante é um documento utilizado
+                        para acompanhar informações importantes durante
+                        a gestação, o parto e o período após o nascimento.
+                    </p>
+
+                    <p>
+                        Ela pode reunir registros de consultas, exames,
+                        vacinas, orientações e outras informações do
+                        acompanhamento.
+                    </p>
+
+                    <div class="aviso-saude">
+
+                        <strong>
+                            💗 Dica:
+                        </strong>
+
+                        Leve a caderneta às consultas e mantenha
+                        os registros atualizados.
+
+                    </div>
+
+                `,
+
+
+                vacinas: `
+
+                    <h3>
+                        💉 Vacinação durante a gestação
+                    </h3>
+
+                    <p>
+                        A situação vacinal deve ser acompanhada durante
+                        o pré-natal. As vacinas indicadas dependem do
+                        histórico vacinal e das recomendações vigentes.
+                    </p>
+
+                    <p>
+                        A equipe da unidade de saúde pode conferir
+                        o histórico e orientar sobre as doses indicadas.
+                    </p>
+
+                    <div class="aviso-saude">
+
+                        <strong>
+                            🌷 Importante:
+                        </strong>
+
+                        Converse com a equipe de saúde antes de tomar
+                        ou deixar de tomar qualquer vacina.
+
+                    </div>
+
+                `,
+
+
+                direitos: `
+
+                    <h3>
+                        ⚖️ Conheça seus direitos
+                    </h3>
+
+                    <p>
+                        Conhecer seus direitos ajuda a mulher a participar
+                        das decisões sobre seu cuidado e a buscar
+                        atendimento de forma informada.
+                    </p>
+
+                    <p>
+                        Entre os direitos relacionados ao parto está a
+                        possibilidade de ter um acompanhante de sua escolha,
+                        conforme a legislação vigente.
+                    </p>
+
+                    <p>
+                        Também é importante perguntar à equipe de saúde
+                        quais serviços estão disponíveis e como funciona
+                        a organização da rede de atendimento.
+                    </p>
+
+                `,
+
+
+                apoio: `
+
+                    <h3>
+                        👥 Rede de apoio
+                    </h3>
+
+                    <p>
+                        A gestante não precisa organizar o cuidado sozinha.
+                        Pessoas de confiança podem ajudar com deslocamentos,
+                        lembretes de consultas, apoio emocional e outras
+                        necessidades do dia a dia.
+                    </p>
+
+                    <p>
+                        A participação do parceiro ou de outras pessoas
+                        da rede de apoio pode contribuir para a continuidade
+                        do cuidado, sempre respeitando a autonomia da mulher.
+                    </p>
+
+                    <div class="aviso-saude">
+
+                        <strong>
+                            💗 Respeito à autonomia:
+                        </strong>
+
+                        a rede de apoio deve respeitar as escolhas,
+                        os limites e a autonomia da mulher.
+
+                    </div>
+
+                `,
+
+
+                mitos: `
+
+                    <h3>
+                        ❓ Mitos e verdades
+                    </h3>
+
+                    <p>
+                        <strong>
+                            “Se estou me sentindo bem, não preciso fazer
+                            pré-natal.”
+                        </strong>
+                    </p>
+
+                    <p>
+                        ❌ <strong>Mito.</strong>
+                        O pré-natal permite acompanhar a saúde materna
+                        e fetal e identificar situações que podem precisar
+                        de atenção.
+                    </p>
+
+
+                    <p>
+                        <strong>
+                            “Cada gestação pode ser diferente.”
+                        </strong>
+                    </p>
+
+                    <p>
+                        ✅ <strong>Verdade.</strong>
+                        Sintomas, necessidades e condutas podem variar
+                        de uma mulher para outra.
+                    </p>
+
+
+                    <p>
+                        <strong>
+                            “Toda gestante deve fazer exatamente os mesmos
+                            exames nos mesmos meses.”
+                        </strong>
+                    </p>
+
+                    <p>
+                        ❌ <strong>Mito.</strong>
+                        O acompanhamento e os exames devem considerar
+                        a situação de cada gestante e as orientações
+                        da equipe de saúde.
+                    </p>
+
+
+                    <p>
+                        <strong>
+                            “A informação pode ajudar na adesão ao pré-natal.”
+                        </strong>
+                    </p>
+
+                    <p>
+                        ✅ <strong>Verdade.</strong>
+                        Informações claras e confiáveis podem facilitar
+                        a compreensão da importância do acompanhamento.
+                    </p>
+
+                `,
+
+
+                alertas: `
+
+                    <h3>
+                        🚨 Quando procurar atendimento?
+                    </h3>
+
+                    <p>
+                        Durante a gestação, alguns sinais precisam de
+                        avaliação profissional e não devem ser ignorados.
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            Sangramento vaginal.
+                        </li>
+
+                        <li>
+                            Perda de líquido pela vagina.
+                        </li>
+
+                        <li>
+                            Dor intensa ou persistente.
+                        </li>
+
+                        <li>
+                            Falta de ar importante, desmaio ou
+                            mal-estar intenso.
+                        </li>
+
+                        <li>
+                            Dor de cabeça forte ou alterações visuais.
+                        </li>
+
+                        <li>
+                            Redução ou ausência de movimentos do bebê,
+                            quando esses movimentos já são percebidos
+                            habitualmente.
+                        </li>
+
+                    </ul>
+
+                    <div class="aviso-saude">
+
+                        <strong>
+                            ⚠️ Atenção:
+                        </strong>
+
+                        Esses sinais não substituem avaliação profissional.
+                        Em uma situação preocupante, procure um serviço
+                        de saúde.
+
+                    </div>
+
+                `
+
+            };
+
+
+            info.innerHTML =
+                conteudos[item];
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
