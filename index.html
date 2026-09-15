@@ -7,7 +7,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Pré Vida</title>
+    <title>Pré Vida | Informação e cuidado no pré-natal</title>
+
+    <meta name="description" content="Pré Vida: informações sobre pré-natal, acompanhamento da gestação, exames, vacinas, profissionais de saúde e barreiras ao acesso ao cuidado.">
 
     <style>
 
@@ -510,8 +512,131 @@
 
 
         /* =========================
+           PERGUNTA NORTEADORA
+        ========================= */
+
+        .pergunta-norteadora {
+            padding: 45px 8% 35px;
+            background-color: white;
+        }
+
+        .norteadora-conteudo {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 35px 40px;
+            border-left: 6px solid #a85f91;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #fff3f8, #f7f0ff);
+            box-shadow: 0 6px 22px rgba(80, 50, 80, 0.08);
+        }
+
+        .norteadora-label {
+            display: block;
+            color: #a85f91;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            margin-bottom: 10px;
+        }
+
+        .norteadora-conteudo h2 {
+            color: #754c88;
+            font-size: 27px;
+            line-height: 1.35;
+            margin-bottom: 12px;
+        }
+
+        .norteadora-conteudo p {
+            font-size: 16px;
+            max-width: 900px;
+        }
+
+        /* =========================
+           DESTAQUE — COMO PODEMOS AJUDAR
+        ========================= */
+
+        .titulo-ajuda-destaque {
+            max-width: 950px;
+            margin: 0 auto 35px;
+            text-align: center;
+            padding: 10px 15px;
+        }
+
+        .titulo-ajuda-destaque > span {
+            display: inline-block;
+            background-color: #ead8ee;
+            color: #754c88;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1.2px;
+            margin-bottom: 12px;
+        }
+
+        .titulo-ajuda-destaque h2 {
+            color: #754c88;
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .titulo-ajuda-destaque p {
+            max-width: 780px;
+            margin: 0 auto;
+            font-size: 18px;
+        }
+
+        .situacao-botao {
+            min-height: 125px;
+        }
+
+        .situacao-botao:focus {
+            outline: 3px solid #d9b5d5;
+            outline-offset: 3px;
+        }
+
+        /* =========================
            CELULAR
         ========================= */
+
+        .resultado-ajuda {
+            max-width: 950px;
+            margin: 25px auto 0;
+            padding: 30px;
+            background-color: white;
+            border-radius: 22px;
+            box-shadow: 0 7px 24px rgba(80, 50, 80, 0.10);
+            text-align: center;
+            min-height: 120px;
+        }
+
+        .resultado-ajuda h3 {
+            color: #754c88;
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .resultado-ajuda p {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .acoes-ajuda {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .botao-secundario {
+            background-color: #ead8ee;
+            color: #754c88;
+        }
+
+        .botao-secundario:hover {
+            background-color: #dcc3e1;
+        }
 
         @media (max-width: 800px) {
 
@@ -543,6 +668,18 @@
 
             .texto-inicio h2 {
                 font-size: 23px;
+            }
+
+            .norteadora-conteudo {
+                padding: 28px 24px;
+            }
+
+            .norteadora-conteudo h2 {
+                font-size: 22px;
+            }
+
+            .titulo-ajuda-destaque h2 {
+                font-size: 32px;
             }
 
             .imagem-inicio {
@@ -592,7 +729,368 @@
             }
         }
 
-    </style>
+
+        /* =========================
+           NOVAS FERRAMENTAS — PRÉ VIDA
+        ========================= */
+
+        .ajuda-section {
+            background: linear-gradient(135deg, #fff8fc, #f8f1ff);
+        }
+
+        .situacoes-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            max-width: 950px;
+            margin: 30px auto;
+        }
+
+        .situacao-botao {
+            background: white;
+            border: 2px solid #f0dceb;
+            border-radius: 20px;
+            padding: 22px;
+            text-align: left;
+            cursor: pointer;
+            color: #4d3b50;
+            font-family: inherit;
+            box-shadow: 0 5px 18px rgba(80, 50, 80, 0.07);
+            transition: 0.2s;
+        }
+
+        .situacao-botao:hover {
+            transform: translateY(-4px);
+            border-color: #d8b6d7;
+            box-shadow: 0 9px 24px rgba(80, 50, 80, 0.12);
+        }
+
+        .situacao-botao strong {
+            display: block;
+            color: #754c88;
+            font-size: 17px;
+            margin-bottom: 5px;
+        }
+
+        .situacao-botao small {
+            display: block;
+            line-height: 1.5;
+        }
+
+        .resultado-ajuda {
+            max-width: 900px;
+            margin: 25px auto 0;
+            padding: 30px;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 7px 24px rgba(80, 50, 80, 0.10);
+            text-align: center;
+        }
+
+        .resultado-ajuda h3 {
+            color: #754c88;
+            margin-bottom: 12px;
+            font-size: 25px;
+        }
+
+        .busca-site {
+            max-width: 900px;
+            margin: 35px auto 0;
+            background: white;
+            border-radius: 24px;
+            padding: 28px;
+            box-shadow: 0 6px 20px rgba(80, 50, 80, 0.08);
+            text-align: center;
+        }
+
+        .campo-busca {
+            width: min(100%, 650px);
+            padding: 15px 18px;
+            border: 2px solid #ead7e9;
+            border-radius: 25px;
+            font-size: 16px;
+            outline: none;
+            font-family: inherit;
+            color: #4d3b50;
+        }
+
+        .campo-busca:focus {
+            border-color: #a968a0;
+        }
+
+        .resultado-busca {
+            margin-top: 20px;
+            display: grid;
+            gap: 10px;
+        }
+
+        .resultado-busca a {
+            display: block;
+            padding: 13px 18px;
+            border-radius: 15px;
+            background: #faf1fa;
+            color: #754c88;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .resultado-busca a:hover {
+            background: #f3e5f2;
+        }
+
+        .checklist-caixa {
+            max-width: 900px;
+            margin: 30px auto;
+            background: white;
+            border-radius: 25px;
+            padding: 30px;
+            box-shadow: 0 7px 24px rgba(80, 50, 80, 0.09);
+        }
+
+        .progresso-checklist {
+            margin-bottom: 25px;
+        }
+
+        .barra-progresso {
+            height: 12px;
+            background: #f0e5ef;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .barra-progresso span {
+            display: block;
+            height: 100%;
+            width: 0%;
+            background: #9565a8;
+            border-radius: 20px;
+            transition: width 0.25s;
+        }
+
+        .item-checklist {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            padding: 17px 0;
+            border-bottom: 1px solid #eee3ed;
+        }
+
+        .item-checklist:last-child {
+            border-bottom: none;
+        }
+
+        .item-checklist label {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .item-checklist input {
+            width: 20px;
+            height: 20px;
+            accent-color: #9565a8;
+        }
+
+        .botao-como {
+            background: transparent;
+            border: 1px solid #c9a8c9;
+            color: #754c88;
+            border-radius: 18px;
+            padding: 8px 13px;
+            cursor: pointer;
+            font-weight: bold;
+            font-family: inherit;
+        }
+
+        .botao-como:hover {
+            background: #f8eff9;
+        }
+
+        .checklist-ajuda {
+            margin-top: 20px;
+            padding: 20px;
+            background: #fff5fa;
+            border-radius: 18px;
+        }
+
+        .perguntas-box {
+            max-width: 850px;
+            margin: 30px auto;
+            background: white;
+            padding: 35px;
+            border-radius: 25px;
+            box-shadow: 0 7px 24px rgba(80, 50, 80, 0.09);
+            text-align: center;
+        }
+
+        .progresso-pergunta {
+            color: #a85f91;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .sim-nao {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .sim-nao button {
+            min-width: 120px;
+            padding: 13px 25px;
+            border: none;
+            border-radius: 24px;
+            background: #9565a8;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .sim-nao button:hover {
+            background: #754c88;
+        }
+
+        .voltar-inicio {
+            display: block;
+            width: fit-content;
+            margin: 35px auto 0;
+            color: #754c88;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .voltar-inicio:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 800px) {
+            .situacoes-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .item-checklist {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+
+    
+        /* =========================
+           VACINAS E EXAMES
+        ========================== */
+
+        .lista-saude {
+            display: grid;
+            gap: 12px;
+            margin: 22px 0;
+        }
+
+        .item-saude {
+            background: #fff8fc;
+            border: 1px solid #efd9ea;
+            border-radius: 16px;
+            padding: 16px 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            text-align: left;
+        }
+
+        .item-saude strong {
+            color: #754c88;
+            font-size: 16px;
+        }
+
+        .item-saude span { color: #625464; line-height: 1.5; }
+        .item-saude small { color: #6d5a70; line-height: 1.45; margin-top: 2px; }
+
+        .acao-saude {
+            margin-top: 22px;
+            padding: 22px;
+            background: #f8e7f3;
+            border-radius: 18px;
+            text-align: center;
+        }
+
+        .acao-saude h4 {
+            color: #754c88;
+            font-size: 19px;
+            margin-bottom: 8px;
+        }
+
+        .acao-saude p {
+            margin-bottom: 16px;
+        }
+
+        .linha-tempo-exames {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin: 22px 0;
+        }
+
+        .linha-tempo-exames div {
+            background: white;
+            border: 1px solid #ead7e8;
+            border-radius: 16px;
+            padding: 17px;
+            text-align: left;
+        }
+
+        .linha-tempo-exames strong {
+            display: block;
+            color: #754c88;
+            margin-bottom: 7px;
+        }
+
+        .linha-tempo-exames span {
+            color: #625464;
+            line-height: 1.45;
+            font-size: 14px;
+        }
+
+        @media (max-width: 800px) {
+            .linha-tempo-exames, .agora-grid { grid-template-columns: 1fr; }
+            .agora-section { padding: 35px 15px; }
+        }
+        .titulo-resultado-busca {
+            color: #754c88;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .sem-resultado-busca {
+            background: #fff7fc;
+            border-radius: 14px;
+            padding: 16px;
+            margin-top: 12px;
+        }
+
+        .sem-resultado-busca strong {
+            color: #754c88;
+        }
+
+        .sem-resultado-busca p {
+            margin-top: 8px;
+        }
+
+        .sem-resultado-busca button {
+            border: none;
+            background: transparent;
+            color: #754c88;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 0 2px;
+            text-decoration: underline;
+        }
+
+</style>
 
 </head>
 
@@ -614,6 +1112,7 @@
             <a href="#inicio">Início</a>
             <a href="#prenatal">Pré-Natal</a>
             <a href="#profissionais">Profissionais</a>
+            <a href="#ajuda">Como podemos ajudar?</a>
             <a href="#adesao">Adesão</a>
         </nav>
 
@@ -723,6 +1222,174 @@
                 alt="Logo Pré Vida"
             >
 
+        </div>
+
+    </section>
+
+
+
+
+    <!-- =========================
+         COMO PODEMOS AJUDAR?
+    ========================== -->
+
+    <section id="pergunta-norteadora" class="pergunta-norteadora">
+
+        <div class="norteadora-conteudo">
+            <span class="norteadora-label">PERGUNTA NORTEADORA DO PROJETO</span>
+            <h2>Falta de informação como barreira à adesão ao pré-natal: impactos na saúde da mulher.</h2>
+            <p>O Pré Vida foi criado para investigar e enfrentar essa barreira por meio de informação clara, orientação e caminhos que facilitem o acesso ao cuidado.</p>
+        </div>
+
+    </section>
+
+
+    <section id="ajuda" class="ajuda-section">
+
+        <div class="titulo-ajuda-destaque">
+            <span>COMO PODEMOS AJUDAR?</span>
+            <h2>Como podemos ajudar você?</h2>
+            <p>Escolha a situação que mais se aproxima do que você está vivendo e encontre, dentro do Pré Vida, um caminho para buscar informação e cuidado.</p>
+        </div>
+
+        <p class="subtitulo">
+            Escolha a situação que mais se aproxima do que você está vivendo.
+            O Pré Vida vai indicar onde encontrar informações que podem ajudar.
+        </p>
+
+        <div class="situacoes-grid">
+
+            <button class="situacao-botao" data-situacao="inicio">
+                <strong>🌷 Descobri que estou grávida e não sei por onde começar.</strong>
+                <small>Veja os primeiros passos para buscar o acompanhamento.</small>
+            </button>
+
+            <button class="situacao-botao" data-situacao="naoComecei">
+                <strong>🏥 Ainda não comecei meu pré-natal.</strong>
+                <small>Encontre informações sobre onde buscar atendimento.</small>
+            </button>
+
+            <button class="situacao-botao" data-situacao="exames">
+                <strong>🧪 Não sei quais exames preciso fazer.</strong>
+                <small>Entenda que os exames são indicados pela equipe de saúde.</small>
+            </button>
+
+            <button class="situacao-botao" data-situacao="vacinas">
+                <strong>💉 Não sei se minhas vacinas estão em dia.</strong>
+                <small>Saiba onde encontrar orientações sobre vacinação.</small>
+            </button>
+
+            <button class="situacao-botao" data-situacao="acesso">
+                <strong>🚍 Tenho dificuldade para chegar ao serviço de saúde.</strong>
+                <small>Conheça barreiras de acesso e encontre uma unidade próxima.</small>
+            </button>
+
+            <button class="situacao-botao" data-situacao="direitos">
+                <strong>⚖️ Tenho dúvidas sobre meus direitos.</strong>
+                <small>Conheça informações importantes sobre o cuidado na gestação e no parto.</small>
+            </button>
+
+            <button class="situacao-botao" data-situacao="sintomas">
+                <strong>🚨 Estou preocupada com algum sintoma.</strong>
+                <small>Veja quando é importante procurar avaliação profissional.</small>
+            </button>
+
+            <button class="situacao-botao" data-situacao="apoio">
+                <strong>👥 Quero ajudar alguém que está grávida.</strong>
+                <small>Entenda como uma rede de apoio pode participar desse cuidado.</small>
+            </button>
+
+        </div>
+
+        <div id="resultado-situacao" class="resultado-ajuda">
+            <h3>💗 Escolha uma situação</h3>
+            <p>Você será direcionada para a parte do Pré Vida que pode ajudar.</p>
+        </div>
+
+        <div class="busca-site">
+            <h3 style="color:#754c88; margin-bottom:10px;">🔎 O que você está procurando?</h3>
+            <p style="margin-bottom:18px;">Digite uma palavra, como “vacina”, “exame”, “direito” ou “posto”.</p>
+            <input id="busca-site" class="campo-busca" type="search" placeholder="Ex.: exames, vacinação, direitos..." oninput="buscarNoSite()">
+            <div id="resultado-busca" class="resultado-busca"></div>
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CHECKLIST
+    ========================== -->
+
+    <section id="checklist">
+
+        <h2 class="titulo">Meu checklist do pré-natal</h2>
+
+        <p class="subtitulo">
+            Marque o que você já fez. Se algo ainda não estiver concluído,
+            clique em “Como faço?” para encontrar orientações dentro do Pré Vida.
+        </p>
+
+        <div class="checklist-caixa">
+
+            <div class="progresso-checklist">
+                <strong id="texto-progresso">0 de 6 etapas concluídas</strong>
+                <div class="barra-progresso">
+                    <span id="barra-progresso"></span>
+                </div>
+            </div>
+
+            <div class="item-checklist">
+                <label><input type="checkbox" data-check="inicio" onchange="atualizarChecklist()"> Iniciei meu pré-natal.</label>
+                <button class="botao-como" onclick="mostrarChecklistAjuda('inicio')">Como faço?</button>
+            </div>
+
+            <div class="item-checklist">
+                <label><input type="checkbox" data-check="exames" onchange="atualizarChecklist()"> Conversei com a equipe sobre os exames indicados.</label>
+                <button class="botao-como" onclick="mostrarChecklistAjuda('exames')">Como faço?</button>
+            </div>
+
+            <div class="item-checklist">
+                <label><input type="checkbox" data-check="vacinas" onchange="atualizarChecklist()"> Verifiquei minha vacinação.</label>
+                <button class="botao-como" onclick="mostrarChecklistAjuda('vacinas')">Como faço?</button>
+            </div>
+
+            <div class="item-checklist">
+                <label><input type="checkbox" data-check="caderneta" onchange="atualizarChecklist()"> Estou com a Caderneta da Gestante.</label>
+                <button class="botao-como" onclick="mostrarChecklistAjuda('caderneta')">Como faço?</button>
+            </div>
+
+            <div class="item-checklist">
+                <label><input type="checkbox" data-check="direitos" onchange="atualizarChecklist()"> Conheço informações básicas sobre meus direitos.</label>
+                <button class="botao-como" onclick="mostrarChecklistAjuda('direitos')">Como faço?</button>
+            </div>
+
+            <div class="item-checklist">
+                <label><input type="checkbox" data-check="duvidas" onchange="atualizarChecklist()"> Separei minhas dúvidas para conversar com a equipe.</label>
+                <button class="botao-como" onclick="mostrarChecklistAjuda('duvidas')">Como faço?</button>
+            </div>
+
+            <div id="checklist-ajuda" class="checklist-ajuda" style="display:none;"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CAMINHO SIM / NÃO
+    ========================== -->
+
+    <section id="duvidas">
+
+        <h2 class="titulo">Vamos encontrar o que pode ajudar?</h2>
+
+        <p class="subtitulo">
+            Responda às perguntas com SIM ou NÃO. Ao final, o Pré Vida indicará
+            uma seção que pode ser útil para a sua situação.
+        </p>
+
+        <div class="perguntas-box">
+            <div id="pergunta-prenatal"></div>
         </div>
 
     </section>
@@ -918,9 +1585,10 @@
                 </h3>
 
                 <p>
-                    O desconhecimento sobre a importância do pré-natal
-                    pode contribuir para o início tardio ou para a não
-                    realização adequada desse acompanhamento.
+                    O desconhecimento sobre a importância do pré-natal,
+                    dos serviços disponíveis e dos cuidados necessários
+                    pode contribuir para o início tardio ou para
+                    dificuldades na continuidade desse acompanhamento.
                 </p>
 
             </div>
@@ -935,7 +1603,8 @@
                 <p>
                     Distância, dificuldades de transporte e acesso aos
                     serviços de saúde podem dificultar a realização
-                    e a continuidade das consultas.
+                    e a continuidade das consultas, mesmo quando a
+                    mulher reconhece a importância do pré-natal.
                 </p>
 
             </div>
@@ -951,6 +1620,8 @@
                     As condições de vida e os recursos disponíveis
                     podem interferir na possibilidade de iniciar
                     e manter o acompanhamento durante a gestação.
+                    Por isso, a adesão não deve ser vista apenas
+                    como uma escolha individual.
                 </p>
 
             </div>
@@ -965,7 +1636,8 @@
                 <p>
                     Trabalho, tarefas domésticas, cuidados com outros
                     filhos e outras responsabilidades podem dificultar
-                    a presença nas consultas.
+                    a presença nas consultas e a continuidade do
+                    acompanhamento.
                 </p>
 
             </div>
@@ -979,8 +1651,9 @@
 
                 <p>
                     Quando o acompanhamento não acontece adequadamente,
-                    pode haver dificuldade para identificar e acompanhar
-                    precocemente situações que precisam de atenção.
+                    pode haver menor oportunidade de identificar e
+                    acompanhar precocemente situações que precisam
+                    de atenção durante a gestação.
                 </p>
 
             </div>
@@ -994,11 +1667,140 @@
 
                 <p>
                     Ampliar o acesso a orientações confiáveis e acessíveis
-                    pode contribuir para reduzir barreiras e incentivar
-                    a busca e a continuidade do pré-natal.
+                    pode contribuir para reduzir a barreira da falta
+                    de informação e incentivar a busca e a continuidade
+                    do pré-natal.
                 </p>
 
             </div>
+
+        </div>
+
+
+        <div class="destaque">
+
+            <h3 style="color: #754c88; margin-bottom: 15px;">
+                Como a falta de informação pode impactar a saúde da mulher?
+            </h3>
+
+            <p>
+                A falta de informação pode ultrapassar a dúvida e se
+                tornar uma barreira ao cuidado. Quando dificulta o acesso
+                ou a continuidade do pré-natal, pode também reduzir
+                oportunidades de orientação, prevenção e acompanhamento
+                da saúde da mulher.
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>
+                    🔎 Identificação tardia de alterações
+                </h3>
+
+                <p>
+                    A falta de informação pode fazer com que a mulher não
+                    compreenda a importância de iniciar e manter o pré-natal.
+                    Com isso, o acompanhamento pode acontecer de forma tardia
+                    ou inadequada, reduzindo as oportunidades de identificar
+                    e acompanhar precocemente possíveis alterações durante
+                    a gestação.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    📋 Menor acesso a orientações de saúde
+                </h3>
+
+                <p>
+                    Quando a mulher não conhece a importância do acompanhamento,
+                    pode deixar de receber orientações essenciais sobre alimentação,
+                    vacinação, exames, sinais de alerta, cuidados durante a gestação
+                    e preparação para o parto. Essas informações são importantes
+                    para que ela participe ativamente do próprio cuidado.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    ⚠️ Dificuldade para reconhecer sinais de alerta
+                </h3>
+
+                <p>
+                    Sem informações adequadas, a gestante pode ter mais dificuldade
+                    para identificar situações que precisam de atenção e compreender
+                    quando é necessário procurar um serviço de saúde. Isso pode
+                    dificultar a busca por atendimento no momento adequado.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    💗 Aumento da insegurança durante a gestação
+                </h3>
+
+                <p>
+                    A falta de conhecimento pode gerar dúvidas e insegurança sobre
+                    as mudanças que acontecem durante a gravidez, os cuidados
+                    necessários e o próprio acompanhamento. Ter acesso a informações
+                    confiáveis pode ajudar a mulher a compreender melhor esse período
+                    e tomar decisões mais conscientes sobre sua saúde.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    🏥 Perda de oportunidades de cuidado e prevenção
+                </h3>
+
+                <p>
+                    Quando a mulher não conhece os serviços disponíveis ou não
+                    compreende a importância das consultas, exames e vacinas,
+                    pode deixar de utilizar recursos importantes para o acompanhamento
+                    da gestação. Dessa forma, a falta de informação pode contribuir
+                    para a perda de oportunidades de cuidado e prevenção.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="destaque">
+
+            <h3 style="color: #754c88; margin-bottom: 15px;">
+                Da informação à adesão
+            </h3>
+
+            <p>
+                <strong>Informação</strong> → compreensão da importância do pré-natal
+                → maior segurança para buscar o cuidado → <strong>adesão ao pré-natal</strong>
+                → acompanhamento da saúde da mulher.
+            </p>
+
+            <p style="margin-top: 15px;">
+                Informação não substitui o atendimento de saúde, mas pode ajudar
+                a mulher a reconhecer a importância do pré-natal, conhecer seus
+                direitos, buscar os serviços disponíveis e participar ativamente
+                do próprio cuidado.
+            </p>
 
         </div>
 
@@ -1191,6 +1993,22 @@
 
                 <small>
                     Acompanhe a importância de verificar a vacinação.
+                </small>
+            </button>
+
+
+            <button
+                class="pratica-botao"
+                onclick="mostrarPratica('exames')"
+            >
+                <span>🧪</span>
+
+                <strong>
+                    Exames do pré-natal
+                </strong>
+
+                <small>
+                    Veja os principais exames e descubra o que fazer se não souber se já realizou.
                 </small>
             </button>
 
@@ -1409,11 +2227,11 @@
             </h3>
 
             <p>
-                Ministério da Saúde — Governo Federal.
+                <a href="https://www.gov.br/saude/pt-br" target="_blank" rel="noopener noreferrer">Ministério da Saúde — Governo Federal</a>.
             </p>
 
             <p>
-                Organização Mundial da Saúde (OMS).
+                <a href="https://www.who.int/" target="_blank" rel="noopener noreferrer">Organização Mundial da Saúde (OMS)</a>.
             </p>
 
             <p>
@@ -1431,6 +2249,8 @@
 
     </section>
 
+
+    <a href="#inicio" class="voltar-inicio">↑ Voltar para o início</a>
 
     <!-- =========================
          RODAPÉ
@@ -1826,6 +2646,14 @@
            SEU PRÉ-NATAL NA PRÁTICA
         ========================== */
 
+        function irParaSecao(id) {
+            const secao = document.getElementById(id);
+            if (secao) {
+                secao.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+
         function mostrarPratica(item) {
 
             const info =
@@ -1869,33 +2697,79 @@
                 vacinas: `
 
                     <h3>
-                        💉 Vacinação durante a gestação
+                        💉 Vacinas durante a gestação
                     </h3>
 
                     <p>
-                        A situação vacinal deve ser acompanhada durante
-                        o pré-natal. As vacinas indicadas dependem do
-                        histórico vacinal e das recomendações vigentes.
+                        A primeira atitude é levar o Cartão de Vacinação à unidade de saúde. A equipe confere o histórico e orienta quais doses são indicadas para cada gestante.
                     </p>
 
-                    <p>
-                        A equipe da unidade de saúde pode conferir
-                        o histórico e orientar sobre as doses indicadas.
-                    </p>
+                    <div class="lista-saude">
+                        <div class="item-saude"><strong>💉 Hepatite B</strong><span><b>Quando:</b> conforme o histórico vacinal.</span><small><b>Para que serve:</b> protege contra hepatite B e hepatite D.</small></div>
+                        <div class="item-saude"><strong>🛡️ dT</strong><span><b>Quando:</b> conforme o histórico vacinal.</span><small><b>Para que serve:</b> protege contra difteria e tétano.</small></div>
+                        <div class="item-saude"><strong>🤧 Influenza</strong><span><b>Quando:</b> 1 dose por temporada.</span><small><b>Para que serve:</b> protege contra a gripe.</small></div>
+                        <div class="item-saude"><strong>🦠 Covid-19</strong><span><b>Quando:</b> 1 dose a cada gestação.</span><small><b>Para que serve:</b> ajuda a proteger contra formas graves da covid-19.</small></div>
+                        <div class="item-saude"><strong>🍼 dTpa</strong><span><b>Quando:</b> 1 dose a partir da 20ª semana, em cada gestação.</span><small><b>Para que serve:</b> protege contra difteria, tétano e coqueluche e também ajuda a proteger o bebê nos primeiros meses.</small></div>
+                        <div class="item-saude"><strong>🫶 VSR</strong><span><b>Quando:</b> 1 dose a partir da 28ª semana, em cada gestação.</span><small><b>Para que serve:</b> ajuda a proteger o bebê contra complicações causadas pelo vírus sincicial respiratório nos primeiros meses.</small></div>
+                        <div class="item-saude"><strong>🌿 Febre amarela</strong><span><b>Quando:</b> em casos excepcionais, conforme histórico vacinal e avaliação da equipe.</span><small><b>Para que serve:</b> protege contra a febre amarela.</small></div>
+                    </div>
+
+                    <div class="acao-saude">
+                        <h4>Não sabe se está com as vacinas em dia?</h4>
+                        <p>Não precisa descobrir sozinha. Leve seu cartão de vacinação a uma unidade de saúde e peça a conferência do seu esquema.</p>
+                        <button class="botao" type="button" onclick="irParaSecao('postos')">📍 Encontrar um posto de saúde</button>
+                    </div>
 
                     <div class="aviso-saude">
-
-                        <strong>
-                            🌷 Importante:
-                        </strong>
-
-                        Converse com a equipe de saúde antes de tomar
-                        ou deixar de tomar qualquer vacina.
-
+                        <strong>💗 Importante:</strong> a lista mostra as recomendações nacionais de 2026. A indicação final depende do histórico vacinal e da avaliação da equipe de saúde.
                     </div>
+
+                    <div class="proximo-passo"><strong>➡️ Próximo passo</strong><p>Separe seu Cartão de Vacinas ou a Caderneta da Gestante e leve para a próxima consulta. Se não souber onde ir, use o botão abaixo.</p><button class="botao" type="button" onclick="irParaSecao('postos')">📍 Encontrar uma unidade de saúde</button></div>
 
                 `,
 
+
+                exames: `
+
+                    <h3>
+                        🧪 Exames durante o pré-natal
+                    </h3>
+
+                    <p>
+                        Os exames ajudam a equipe a acompanhar a saúde da gestante e identificar situações que precisam de atenção. Nem todos são feitos da mesma forma ou no mesmo momento para todas as mulheres: a equipe define o que é necessário para cada gestação.
+                    </p>
+
+                    <div class="lista-saude">
+                        <div class="item-saude"><strong>🩸 Tipagem sanguínea e fator Rh</strong><span><b>Para que serve:</b> identifica o tipo de sangue e o fator Rh.</span><small><b>Pode haver outro exame:</b> o Coombs indireto pode ser indicado em algumas situações relacionadas ao Rh.</small></div>
+                        <div class="item-saude"><strong>🩸 Hemograma</strong><span><b>Para que serve:</b> ajuda a identificar alterações como anemia.</span></div>
+                        <div class="item-saude"><strong>🧬 Eletroforese de hemoglobina</strong><span><b>Para que serve:</b> ajuda a identificar condições hereditárias, como doença falciforme e talassemia.</span></div>
+                        <div class="item-saude"><strong>🍬 Glicemia</strong><span><b>Para que serve:</b> mede a quantidade de açúcar no sangue e pode ajudar a identificar diabetes.</span></div>
+                        <div class="item-saude"><strong>🧫 HIV, sífilis e hepatites B e C</strong><span><b>Para que serve:</b> identifica infecções para possibilitar acompanhamento e tratamento quando necessário.</span></div>
+                        <div class="item-saude"><strong>🦟 Teste de malária</strong><span><b>Quando:</b> para gestantes da Região Amazônica, mesmo sem sintomas.</span></div>
+                    </div>
+
+                    <div class="linha-tempo-exames">
+                        <div><strong>🤰 Início do pré-natal</strong><span>Exames iniciais são solicitados conforme a avaliação da equipe.</span></div>
+                        <div><strong>📅 Ao longo da gestação</strong><span>Alguns exames podem ser repetidos ou complementados conforme a necessidade.</span></div>
+                        <div><strong>🩺 Situações específicas</strong><span>Outros exames podem ser indicados de acordo com sintomas, histórico e condições de saúde.</span></div>
+                    </div>
+
+                    <div class="acao-saude">
+                        <h4>Você não sabe se já fez algum exame?</h4>
+                        <p>Confira sua Caderneta da Gestante e pergunte à equipe de saúde quais resultados já estão registrados e quais ainda precisam ser realizados.</p>
+                        <div class="acoes-ajuda">
+                            <button class="botao" type="button" onclick="mostrarPratica('caderneta')">📒 Ver Caderneta da Gestante</button>
+                            <button class="botao botao-secundario" type="button" onclick="irParaSecao('postos')">📍 Encontrar atendimento</button>
+                        </div>
+                    </div>
+
+                    <div class="aviso-saude">
+                        <strong>🌷 Atenção:</strong> não use esta lista para decidir sozinha quais exames fazer. O pré-natal deve ser individualizado pela equipe de saúde.
+                    </div>
+
+                    <div class="proximo-passo"><strong>➡️ Próximo passo</strong><p>Abra sua Caderneta da Gestante e confira os registros. Na consulta, pergunte quais exames já foram feitos, quais resultados estão disponíveis e se existe algum exame pendente.</p><div class="acoes-ajuda"><button class="botao" type="button" onclick="mostrarPratica('caderneta')">📒 Conferir a caderneta</button><button class="botao botao-secundario" type="button" onclick="irParaSecao('postos')">📍 Encontrar atendimento</button></div></div>
+
+                `,
 
                 direitos: `
 
@@ -2084,6 +2958,252 @@
                 conteudos[item];
 
         }
+
+
+        /* =========================
+           SITUAÇÕES — CAMINHO DIRETO
+        ========================= */
+
+        function mostrarSituacao(situacao) {
+            const dados = {
+                inicio: ['🌷 Por onde começar?', 'O primeiro passo é buscar uma unidade de saúde e conversar com a equipe sobre o início do pré-natal.', '#postos', 'Encontrar um posto de saúde'],
+                naoComecei: ['🏥 Ainda não começou?', 'Procure uma unidade de saúde para iniciar o acompanhamento. O Pré Vida também explica por que esse cuidado é importante.', '#postos', 'Encontrar atendimento'],
+                exames: ['🧪 Não sabe quais exames fazer?', 'Os exames não são iguais para todas as gestantes. A equipe de saúde indica quais são necessários em cada situação e orienta onde realizá-los.', '#pratica', 'Ver informações sobre exames'],
+                vacinas: ['💉 Não sabe se suas vacinas estão em dia?', 'A situação vacinal deve ser verificada com a equipe de saúde, que orientará as vacinas indicadas para cada gestante.', '#pratica', 'Ver informações sobre vacinação'],
+                acesso: ['🚍 Está com dificuldade para chegar ao serviço de saúde?', 'Distância, transporte, rotina e outras condições podem dificultar o acompanhamento. Conheça essas barreiras e procure uma unidade de saúde.', '#barreiras', 'Conhecer as barreiras'],
+                direitos: ['⚖️ Tem dúvidas sobre seus direitos?', 'Conhecer seus direitos ajuda a mulher a participar do próprio cuidado e a buscar atendimento de forma mais informada.', '#pratica', 'Ver informações sobre direitos'],
+                sintomas: ['🚨 Está preocupada com algum sintoma?', 'O site apresenta sinais de alerta de forma educativa, mas não substitui uma avaliação profissional. Se houver preocupação, procure um serviço de saúde.', '#pratica', 'Ver sinais de alerta'],
+                apoio: ['👥 Quer ajudar alguém que está grávida?', 'Pessoas de confiança podem ajudar com informação, acompanhamento e organização da rotina durante a gestação.', '#pratica', 'Ver informações sobre rede de apoio']
+            };
+
+            const d = dados[situacao];
+            const resultado = document.getElementById('resultado-situacao');
+
+            if (!d || !resultado) return;
+
+            resultado.innerHTML = `
+                <h3>${d[0]}</h3>
+                <p>${d[1]}</p>
+                <div class="acoes-ajuda">
+                    <a href="${d[2]}" class="botao">${d[3]}</a>
+                    <button type="button" class="botao botao-secundario" onclick="voltarSituacoes()">Escolher outra situação</button>
+                </div>`;
+
+            resultado.classList.add('resultado-ativo');
+            resultado.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        function voltarSituacoes() {
+            const area = document.querySelector('.situacoes-grid');
+            if (area) area.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        /* =========================
+           BUSCA DENTRO DO SITE
+        ========================= */
+
+        const paginasBusca = [
+            ['O que é o pré-natal?', 'Entenda o acompanhamento e sua importância.', '#prenatal', ['prenatal', 'pré-natal', 'importância', 'consulta']],
+            ['Acompanhamento da gestação', 'Veja informações organizadas por mês.', '#acompanhamento', ['mês', 'meses', 'gestação', 'gravidez']],
+            ['Barreiras ao pré-natal', 'Conheça obstáculos que podem dificultar a adesão.', '#barreiras', ['barreira', 'acesso', 'informação', 'transporte']],
+            ['Impactos na saúde da mulher', 'Entenda possíveis impactos relacionados à falta de informação.', '#impactos', ['impacto', 'saúde', 'mulher']],
+            ['Profissionais de saúde', 'Conheça os profissionais que podem participar do cuidado.', '#profissionais', ['profissional', 'enfermagem', 'médico', 'nutrição', 'odontologia', 'psicologia']],
+            ['Encontre um posto de saúde', 'Procure atendimento perto de você.', '#postos', ['posto', 'unidade', 'saúde', 'atendimento']],
+            ['Seu pré-natal na prática', 'Vacinação, direitos, caderneta, apoio e sinais de alerta.', '#pratica', ['vacina', 'vacinação', 'direito', 'caderneta', 'apoio', 'alerta', 'exame']],
+            ['Meu checklist do pré-natal', 'Acompanhe o que você já verificou.', '#checklist', ['checklist', 'lista', 'etapas']],
+            ['Como podemos ajudar?', 'Escolha uma situação e encontre um caminho dentro do site.', '#ajuda', ['ajuda', 'situação', 'dúvida', 'procurando']]
+        ];
+
+        function normalizarBusca(texto) {
+            return texto
+                .toLowerCase()
+                .normalize('NFD')
+                .replace(/[\u0300-\u036f]/g, '')
+                .replace(/[^a-z0-9\s-]/g, ' ')
+                .replace(/\s+/g, ' ')
+                .trim();
+        }
+
+        function buscarNoSite() {
+            const campo = document.getElementById('busca-site');
+            const resultado = document.getElementById('resultado-busca');
+            const termoOriginal = campo.value.trim();
+            const termo = normalizarBusca(termoOriginal);
+
+            if (!termo) {
+                resultado.innerHTML = '';
+                return;
+            }
+
+            const palavras = termo.split(' ').filter(Boolean);
+
+            const encontrados = paginasBusca.filter(pagina => {
+                const texto = normalizarBusca(
+                    pagina[0] + ' ' + pagina[1] + ' ' + pagina[3].join(' ')
+                );
+
+                // Aceita a busca por mais de uma palavra e também
+                // pequenas variações, como singular/plural.
+                return palavras.every(palavra => {
+                    if (texto.includes(palavra)) return true;
+                    if (palavra.length > 4 && texto.includes(palavra.slice(0, -1))) return true;
+                    return false;
+                });
+            });
+
+            if (!encontrados.length) {
+                resultado.innerHTML = `
+                    <div class="sem-resultado-busca">
+                        <strong>Não encontramos uma seção para “${termoOriginal}”.</strong>
+                        <p>Tente uma palavra como <button type="button" onclick="buscarSugestao('vacina')">vacina</button>, <button type="button" onclick="buscarSugestao('exame')">exame</button>, <button type="button" onclick="buscarSugestao('direito')">direito</button> ou <button type="button" onclick="buscarSugestao('posto')">posto</button>.</p>
+                    </div>`;
+                return;
+            }
+
+            resultado.innerHTML = `
+                <p class="titulo-resultado-busca">Encontramos ${encontrados.length === 1 ? 'uma parte' : 'algumas partes'} que podem ajudar:</p>
+                ${encontrados.map(pagina => `
+                    <a href="${pagina[2]}" onclick="setTimeout(() => document.getElementById('busca-site').value = '', 100)">
+                        <strong>${pagina[0]}</strong><br>
+                        <small style="font-weight:normal;">${pagina[1]}</small>
+                    </a>`).join('')}`;
+        }
+
+        function buscarSugestao(termo) {
+            const campo = document.getElementById('busca-site');
+            campo.value = termo;
+            buscarNoSite();
+            campo.focus();
+        }
+
+
+        /* =========================
+           CHECKLIST COM PROGRESSO
+        ========================= */
+
+        const checklistChaves = ['inicio', 'exames', 'vacinas', 'caderneta', 'direitos', 'duvidas'];
+
+        function atualizarChecklist() {
+            let concluidas = 0;
+
+            document.querySelectorAll('[data-check]').forEach(caixa => {
+                if (caixa.checked) concluidas++;
+                try {
+                    localStorage.setItem('previda_' + caixa.dataset.check, caixa.checked ? '1' : '0');
+                } catch (e) {}
+            });
+
+            const porcentagem = (concluidas / checklistChaves.length) * 100;
+            document.getElementById('texto-progresso').textContent = `${concluidas} de ${checklistChaves.length} etapas concluídas`;
+            document.getElementById('barra-progresso').style.width = porcentagem + '%';
+        }
+
+        function carregarChecklist() {
+            document.querySelectorAll('[data-check]').forEach(caixa => {
+                try {
+                    caixa.checked = localStorage.getItem('previda_' + caixa.dataset.check) === '1';
+                } catch (e) {}
+            });
+            atualizarChecklist();
+        }
+
+        function mostrarChecklistAjuda(item) {
+            const dados = {
+                inicio: '<strong>Para iniciar:</strong> procure uma Unidade Básica de Saúde ou outro serviço de referência da sua região e converse com a equipe sobre o início do pré-natal.',
+                exames: '<strong>Sobre os exames:</strong> não existe uma lista única que sirva para todas as gestantes. A equipe de saúde indica os exames de acordo com a situação de cada mulher e orienta onde realizá-los.',
+                vacinas: '<strong>Sobre as vacinas:</strong> leve sua caderneta à unidade de saúde e peça à equipe para conferir sua situação vacinal e orientar as vacinas indicadas.',
+                caderneta: '<strong>Caderneta da Gestante:</strong> ela reúne informações importantes do acompanhamento. Pergunte à equipe de saúde como obter e utilizar a sua.',
+                direitos: '<strong>Sobre seus direitos:</strong> consulte a seção “Seus direitos” do Pré Vida e converse com a equipe de saúde quando tiver dúvidas sobre o atendimento.',
+                duvidas: '<strong>Organize suas dúvidas:</strong> anote sintomas, perguntas sobre exames, vacinas, alimentação e outros assuntos para conversar com a equipe durante a consulta.'
+            };
+
+            const caixa = document.getElementById('checklist-ajuda');
+            caixa.innerHTML = dados[item];
+            caixa.style.display = 'block';
+            caixa.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+
+        /* =========================
+           CAMINHO SIM / NÃO
+        ========================= */
+
+        const perguntasPreNatal = [
+            ['Você já iniciou seu pré-natal?', 'nao'],
+            ['Você sabe quais exames foram indicados para você?', 'exames'],
+            ['Você sabe se sua vacinação está em dia?', 'vacinas'],
+            ['Você conhece informações básicas sobre seus direitos?', 'direitos'],
+            ['Você consegue chegar ao serviço de saúde sem grandes dificuldades?', 'acesso']
+        ];
+
+        let perguntaAtual = 0;
+
+        function mostrarPerguntaPreNatal() {
+            const caixa = document.getElementById('pergunta-prenatal');
+            if (!caixa) return;
+
+            if (perguntaAtual >= perguntasPreNatal.length) {
+                caixa.innerHTML = `
+                    <h3 style="color:#754c88;">💗 Você chegou ao final!</h3>
+                    <p>Agora você pode conferir seu checklist e usar as outras ferramentas do Pré Vida para continuar buscando informações.</p>
+                    <div style="margin-top:20px; display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
+                        <a href="#checklist" class="botao">Ver checklist</a>
+                        <button class="botao" onclick="reiniciarPerguntas()">Responder novamente</button>
+                    </div>`;
+                return;
+            }
+
+            const p = perguntasPreNatal[perguntaAtual];
+            caixa.innerHTML = `
+                <div class="progresso-pergunta">Pergunta ${perguntaAtual + 1} de ${perguntasPreNatal.length}</div>
+                <h3 style="color:#754c88; font-size:24px;">${p[0]}</h3>
+                <div class="sim-nao">
+                    <button onclick="responderPergunta(true)">SIM</button>
+                    <button onclick="responderPergunta(false)">NÃO</button>
+                </div>`;
+        }
+
+        function responderPergunta(sim) {
+            if (sim) {
+                perguntaAtual++;
+                mostrarPerguntaPreNatal();
+                return;
+            }
+
+            const destino = perguntasPreNatal[perguntaAtual][1];
+            const dados = {
+                nao: ['🌷 O primeiro passo é começar o acompanhamento', 'Procure uma unidade de saúde e converse com a equipe sobre o início do pré-natal.', '#postos', 'Encontrar atendimento'],
+                exames: ['🧪 Vamos falar sobre os exames', 'Os exames variam conforme cada gestação. A equipe indica quais são necessários e orienta onde realizá-los.', '#pratica', 'Ver exames'],
+                vacinas: ['💉 Vamos conferir a vacinação', 'Leve sua caderneta à unidade de saúde para que a equipe confira sua situação vacinal e oriente você.', '#pratica', 'Ver vacinação'],
+                direitos: ['⚖️ Conheça seus direitos', 'Informação ajuda a mulher a participar do próprio cuidado e a buscar atendimento de forma mais consciente.', '#pratica', 'Ver direitos'],
+                acesso: ['🏥 Essa dificuldade também importa', 'Transporte, distância e rotina podem ser barreiras reais. Você pode conhecer esses obstáculos e buscar uma unidade de saúde.', '#barreiras', 'Conhecer barreiras']
+            }[destino];
+
+            document.getElementById('pergunta-prenatal').innerHTML = `
+                <h3 style="color:#754c88;">${dados[0]}</h3>
+                <p>${dados[1]}</p>
+                <div style="margin-top:20px;">
+                    <a href="${dados[2]}" class="botao">${dados[3]}</a>
+                    <button class="botao" style="margin-left:8px;" onclick="reiniciarPerguntas()">Responder novamente</button>
+                </div>`;
+        }
+
+        function reiniciarPerguntas() {
+            perguntaAtual = 0;
+            mostrarPerguntaPreNatal();
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            carregarChecklist();
+            mostrarPerguntaPreNatal();
+
+            document.querySelectorAll('.situacao-botao').forEach(function (botao) {
+                botao.addEventListener('click', function () {
+                    mostrarSituacao(this.dataset.situacao);
+                });
+            });
+        });
+
 
     </script>
 
